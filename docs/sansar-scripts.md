@@ -1,5 +1,7 @@
 # Getting Started with Sansar Scripts
 
+Before starting to write scripts, it is best if you s[etup your development environment](vscode.md), it will make your life alot easier.
+
 ## Script Structure
 
 The bare minimum in a Sansar sctipt is the following:
@@ -86,9 +88,7 @@ The requirements for a valid parameters are:
 
 ## Debugging
 
-When visiting an experience, it is possible to see the debug console by pressing `Ctrl + D` which is visible only the the scene owner.
-
-Any errors, warnings, or notices will be visible in this console.
+When visiting an experience, it is possible to see the debug console by pressing `Ctrl + D` which is visible only the the scene owner. Any errors, warnings, or notices will be visible in this console.
 
 You can write your own console messages using `Log.Write()`. For example:
 
