@@ -26,16 +26,16 @@ User controls can be subscribed to using `User.Client.Subscribe()`. Currently th
 
 | Keyword | Desktop | Vive | Rift | Notes |
 |---------|:-------:|:----:|:----:|-------|
-| `Trigger` | <kbd>mouse click</kbd> | trigger | trigger | Used as the "fire" control. |
-| `PrimaryAction` | <kbd>F</kbd> | grip | grip | Used for picking up / dropping things. If the object has the "Stick to hand" flag turned off, then mouse click will also drop the item on desktop.|
-| `SecondaryAction` | <kbd>R</kbd> | center click | A/X | Normally used as the "gun reload" control|
-| `Confirm` | <kbd>Enter</kbd> | | B | |
-| `Cancel` | <kbd>Esc</kbd> | | Y | |
+| `Trigger` | mouse <kbd>click</kbd> | <kbd>trigger</kbd> | <kbd>trigger</kbd> | Used as the "fire" control. |
+| `PrimaryAction` | <kbd>F</kbd> | <kbd>grip</kbd> | <kbd>grip</kbd> | Used for picking up / dropping things. If the object has the "Stick to hand" flag turned off, then mouse click will also drop the item on desktop.|
+| `SecondaryAction` | <kbd>R</kbd> | center <kbd>click</kbd> | <kbd>A</kbd>/<kbd>X</kbd> | Normally used as the "gun reload" control|
+| `Confirm` | <kbd>Enter</kbd> | | <kbd>B</kbd> | |
+| `Cancel` | <kbd>Esc</kbd> | | <kbd>Y</kbd> | |
 | `Modifier`| <kbd>Shift</kbd> | | | Used for toggling running on/off |
 | `SelectUp` | <kbd>&#x2191;</kbd> | | | |
 | `SelectDown` | <kbd>&#x2193;</kbd> | | | |
 | `SelectRight` | <kbd>&#x2192;</kbd> | | | |
 | `SelectLeft` | <kbd>&#x2190;</kbd> | | | |
 | `KeypadEnter` | Keypad <kbd>Enter</kbd> | | | |
-| `Keypad[0-9]` | Keypad <kbd>0</kbd> - <kbd>9</kbd> | | | For example `Keypad5` is triggered when <kbd>5</kbd> is pressed in the keypad area of the keyboard|
+| `Keypad[0-9]` | Keypad <kbd>0</kbd>  - <kbd>9</kbd> | | | For example `Keypad5` is triggered when <kbd>5</kbd> is pressed in the keypad area of the keyboard|
 | `Action[0-9]` | <kbd>0</kbd> - <kbd>9</kbd> | | | For example `Action3` is triggered when <kbd>3</kbd> is pressed in the numbers area of the keyboard|
