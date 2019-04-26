@@ -26,6 +26,7 @@ Sansar scripts can include several scene classes in one script, which would resu
 
 ```csharp
 using Sansar.Simulation;
+using Sansar.Script;
 
 [DefaultScript]
 public class HelloWorld : SceneObjectScript {
