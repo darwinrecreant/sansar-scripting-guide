@@ -1,0 +1,17 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net462</TargetFramework>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Mono.Simd">
+      <HintPath>.\Assemblies\Mono.Simd.dll</HintPath>
+    </Reference>
+    <Reference Include="Sansar.Script">
+      <HintPath>.\Assemblies\Sansar.Script.dll</HintPath>
+    </Reference>
+    <Reference Include="Sansar.Simulation">
+      <HintPath>.\Assemblies\Sansar.Simulation.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+  </ItemGroup>
+</Project>

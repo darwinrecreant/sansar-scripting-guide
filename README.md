@@ -11,11 +11,12 @@ This is a guide for C# scripting in Sansar, and serves as a temporary repository
 
 C# (C Sharp) is an object-oriented programming (OOP) language developed by Microsoft that is primarily used for creating games. Many popular gaming frameworks, such as Unity, use C#, and this is also the lanugage used for Sansar scripts.
 
+- [Setting up Visual Studio Code](/docs/vscode.md)
 - [Getting started with C#](/docs/c-sharp.md)
 
 ## Intro to Sansar Scripts
 
-Sansar scripts use a custom subset of C# that restict the usage to only whitelisted native libraries, for both security and performance reasons. Normally if native a library is too useful but fails either these two requirements, than a custom implenetation will be provided with some limitations applied; `HttpClient` is a prime example of this.
+Sansar scripts use a custom subset of C# that restict the usage to only whitelisted native libraries, for both security and performance reasons. Normally, if a native library is too useful but fails either these two requirements, than a custom implenetation will be provided with some limitations applied; `HttpClient` is a prime example of this.
 
 - [Getting started with Sansar scripts](/docs/sansar-scripts.md)
 
