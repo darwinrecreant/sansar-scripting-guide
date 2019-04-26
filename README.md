@@ -29,7 +29,7 @@ User controls can be subscribed to using `User.Client.Subscribe()`. Currently th
 | `Trigger` | mouse click | trigger | trigger | Used as the "fire" control. |
 | `PrimaryAction` | F | grip | grip | Used for picking up / dropping things. If the object has the "Stick to hand" flag turned off, then mouse click will also drop the item on desktop.|
 | `SecondaryAction` | R | center click | A/X | Normally used as the "gun reload" control|
-| `Confirm` | Enter | | B | |
+| `Confirm` | <kdd>Enter</kdd> | | B | |
 | `Cancel` | Esc | | Y | |
 | `Modifier`| Shift | | | Used for toggling running on/off |
 | `SelectUp` | &#x2191; | | | |
