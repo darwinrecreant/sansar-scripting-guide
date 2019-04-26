@@ -4,7 +4,7 @@
 
 C# is and object-oriented programing language (OOP), which means it treats everything as an "object". An object is basically some value, or `state`, that is wrapped with a bunch of helper functions, or `methods`, that do something with this state. An object's methods have to be defined in advance in `classes`, which are a sort of blueprint to the value and what it can do. What class an object is made of is known as it's `type`. A `string` is a type, so is `float`, `int` or any other class name available in your current environment.
 
-So, if I have a piece pf text, or `string`, and want to make it all upper case, you can write something like:
+So, if I have a piece of text, or `string`, and want to make it all upper case, you can write something like:
 
 ```csharp
 "Hello World".ToUpper();
@@ -45,14 +45,14 @@ public class MyClass {
 
   string MyMessage = "Hello World";
 
-  string GetMessage() {
+  public string GetMessage() {
     return MyMessage;
   }
 
 }
 ```
 
-In the above example, we defined a string variable with the text `Hello World` inside our class, and a method `GetMessage()` which `returns` the variable. Returning a value basically means you pass on a value to be used outside this method when it is called. The `string` before `GetMessage()` says this method returns a string value, which means you have to return a string at some point in your method, in our case it is the first line in the method. If the method does not return any value, then you can replace `string` with `void`.
+In the above example, we defined a string variable with the text `Hello World` inside our class, and a method `GetMessage()` which `returns` the variable. Returning a value basically means you pass on a value to be used outside this method when it is called. The `string` before `GetMessage()` says this method returns a string value, which means you have to return a string at some point in your method, in our case it is the first line in the method. If the method does not return any value, then you can replace `string` with `void`. The `public` keyword means this method is accessible outside the internals of the class, ie for public access. Normally if you do not want to expose internal helper functions and variables then you can omit the public keyword.
 
 The above examble can then be used like so:
 
@@ -71,7 +71,7 @@ public class MyClass {
 
   string MyMessage = "Hello World";
 
-  string GetMessage() {
+  public string GetMessage() {
     return MyMessage;
   }
 
