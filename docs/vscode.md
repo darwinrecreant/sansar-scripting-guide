@@ -13,9 +13,9 @@ Visual Studio Code (vscode), not to be confused with Visual Studio, is a lightwe
 8. Open vscode in the downloaded workspace, open the terminal (<kbd>Ctrl</kbd> + <kbd>~</kbd>), and type `dotnet restore`
 9. Close and reopen vscode. You can now create your first [Sansar script](sansar-scripts.md).
 
-## Every Sansar Client Update
+## For Every Sansar Client Update
 1. Double click `get-sansar-lib.bat` (outside vscode)
-2. Open the terminal (<kbd>Ctrl</kbd> + <kbd>~</kbd>), and type `dotnet restore`
+2. Open vscode in the downloaded workspace, open the terminal (<kbd>Ctrl</kbd> + <kbd>~</kbd>), and type `dotnet restore`
 3. Close and reopen vscode
 
 ## Every New Project
