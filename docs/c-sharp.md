@@ -41,7 +41,7 @@ MyClass someObject = new MyClass();
 And you defined a custom class like so:
 
 ```csharp
-class MyClass {
+pulbic class MyClass {
 
   string MyMessage = "Hello World";
 
@@ -67,7 +67,7 @@ And for the complete code that is usable in Sansar:
 ```csharp
 using Sansar.Simulation;
 
-class MyClass {
+public class MyClass {
 
   string MyMessage = "Hello World";
 
