@@ -52,9 +52,9 @@ public class MyClass {
 }
 ```
 
-In the above example, we defined a string variable with the text `Hello World` inside our class, and a method `GetMessage()` which `returns` the variable. Returning a value basically means you pass on a value to be used outside this method when it is called, just like `ToUpper()` returned a string with all upper case. The `string` before `GetMessage()` says this method returns a string value, which means you have to return a string at some point in your method, in our case it is the first line in the method. If the method does not return any value, then you can replace `string` with `void`. The `public` keyword means this method is accessible outside the internals of the class, ie for public access. Normally if you do not want to expose internal helper functions and variables then you can omit the public keyword.
+In the above example, we defined a string variable with the text `Hello World` inside our class, and a method `GetMessage()` which `returns` the variable. Returning a value basically means you pass on a value to be used outside this method when it is called, just like `ToUpper()` returned a string with all upper case. The `string` before `GetMessage()` says this method returns a string value, which means you have to return a string at some point inside your method, in our case it is the first line in the method. If the method does not return any value, then you can replace `string` with `void`. The `public` keyword means this method is accessible outside the internals of the class, ie for public access. Normally if you do not want to expose internal helper functions and variables then you can omit the public keyword.
 
-The above examble can then be used like so:
+The above example can then be used like so:
 
 ```csharp
 MyClass someObject = new MyClass();
@@ -87,3 +87,13 @@ public class HelloWorld : SceneObjectScript {
   
 }
 ```
+
+## Inheritence
+
+## Method Arguments and Contructors
+
+## Generic Types
+
+## Attributes
+
+## Scope and Inline Functions
