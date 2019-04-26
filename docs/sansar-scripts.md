@@ -4,7 +4,7 @@ Before starting to write scripts, it is best if you s[etup your development envi
 
 ## Script Structure
 
-The bare minimum in a Sansar sctipt is the following:
+The bare minimum in a Sansar script is the following:
 
 ```csharp
 using Sansar.Simulation;
@@ -62,7 +62,7 @@ This is especially handy for orginizating large projects, or including scripts b
 
 ## Script Parameters
 
-Scripts can have parameters that are exposed in the scene editor when attaching the scripting to an object, which basically allows for adding user configuration to scripts before the script is executes in the experience.
+Scripts can have parameters that are exposed in the scene editor when attaching the scripting to an object, which basically allows for adding user configuration to scripts before the script executes in the experience.
 
 Parameters are basically public variables on the main `SceneObjectScript` class, that must follow a few requirements. An example usage of a parameter is as follows:
 
