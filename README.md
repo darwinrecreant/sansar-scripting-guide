@@ -26,16 +26,16 @@ User controls can be subscribed to using `User.Client.Subscribe()`. Currently th
 
 | Keyword | Desktop | Vive | Rift | Notes |
 |---------|:-------:|:----:|:----:|-------|
-| `Trigger` | mouse click | trigger | trigger | Used as the "fire" control. |
-| `PrimaryAction` | F | grip | grip | Used for picking up / dropping things. If the object has the "Stick to hand" flag turned off, then mouse click will also drop the item on desktop.|
-| `SecondaryAction` | R | center click | A/X | Normally used as the "gun reload" control|
-| `Confirm` | <kdd>Enter</kdd> | | B | |
-| `Cancel` | Esc | | Y | |
-| `Modifier`| Shift | | | Used for toggling running on/off |
-| `SelectUp` | &#x2191; | | | |
-| `SelectDown` | &#x2193; | | | |
-| `SelectRight` | &#x2192; | | | |
-| `SelectLeft` | &#x2190; | | | |
-| `KeypadEnter` | Keypad Enter | | | |
-| `Keypad[0-9]` | Keypad 0 - 9 | | | For example `Keypad5` is triggered when `5` is pressed in the keypad area of the keyboard|
-| `Action[0-9]` | 0 - 9 | | | For example `Action3` is triggered when `3` is pressed in the numbers area of the keyboard|
+| `Trigger` | <kbd>mouse click</kbd> | trigger | trigger | Used as the "fire" control. |
+| `PrimaryAction` | <kbd>F</kbd> | grip | grip | Used for picking up / dropping things. If the object has the "Stick to hand" flag turned off, then mouse click will also drop the item on desktop.|
+| `SecondaryAction` | <kbd>R</kbd> | center click | A/X | Normally used as the "gun reload" control|
+| `Confirm` | <kbd>Enter</kbd> | | B | |
+| `Cancel` | <kbd>Esc</kbd> | | Y | |
+| `Modifier`| <kbd>Shift</kbd> | | | Used for toggling running on/off |
+| `SelectUp` | <kbd>&#x2191;</kbd> | | | |
+| `SelectDown` | <kbd>&#x2193;</kbd> | | | |
+| `SelectRight` | <kbd>&#x2192;</kbd> | | | |
+| `SelectLeft` | <kbd>&#x2190;</kbd> | | | |
+| `KeypadEnter` | Keypad <kbd>Enter</kbd> | | | |
+| `Keypad[0-9]` | Keypad <kbd>0 - 9</kbd> | | | For example `Keypad5` is triggered when <kbd>5</kbd> is pressed in the keypad area of the keyboard|
+| `Action[0-9]` | <kbd>0 - 9</kbd> | | | For example `Action3` is triggered when <kbd>3</kbd> is pressed in the numbers area of the keyboard|
