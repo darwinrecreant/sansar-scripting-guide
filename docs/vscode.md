@@ -9,12 +9,12 @@ Visual Studio Code (vscode), not to be confused with Visual Studio, is a lightwe
 4. Install [.NET Core](https://www.microsoft.com/net/core)
 5. Install [.NET Framework 4.6.2 Developer Pack](https://www.microsoft.com/en-us/download/details.aspx?id=53321)
 6. Edit `get-sansar-lib.bat` and make sure the directory path in robocopy commands point to your Sansar installation on you computer, if it does not then change it and save.
-7. Double click `get-sansar-lib.bat` in the downloaded workspace in step 1, this will copy Sansar assemblies (dlls) and Script Library code to your local directory and will allow autcompletion of api and easily include `LibraryBase.cs` in your projects.
+7. Double click `get-sansar-lib.bat` (outside vscode) in the downloaded workspace in step 1, this will copy Sansar assemblies (dlls) and Script Library code to your local directory and will allow autcompletion of api and easily include `LibraryBase.cs` in your projects.
 8. Open vscode in the downloaded workspace, open the terminal (`Ctrl + ~`), and type `dotnet restore`
 9. Close and reopen vscode. You can now create your first [Sansar script](sansar-scripts.md)
 
 ## Every Sansar Client Update
-1. Double click `get-sansar-lib.bat`
+1. Double click `get-sansar-lib.bat` (outside vscode)
 2. Open the terminal (`Ctrl + ~`), and type `dotnet restore`
 3. Close and reopen vscode
 
