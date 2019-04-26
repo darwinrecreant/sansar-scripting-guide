@@ -30,7 +30,7 @@ So here we can see that we stored our value in a variable, turned it to upper wi
 HELLO WORLD
 ```
 
-# Classes
+## Classes
 
 Types like `string` and `int` are primitive types, which behave a little different from regular classes, which we wont get into now. But the main difference is you _create_ a `string` by wrapping it in quotes, or for just write the number for `int`, but for every other class you create it using the `new` keyword:
 
@@ -41,7 +41,7 @@ MyClass someObject = new MyClass();
 And you defined a custom class like so:
 
 ```csharp
-pulbic class MyClass {
+public class MyClass {
 
   string MyMessage = "Hello World";
 
