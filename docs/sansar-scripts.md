@@ -94,6 +94,7 @@ You can write your own console messages using `Log.Write()`. For example:
 
 ```csharp
 using Sansar.Simulation;
+using Sansar.Script;
 
 public class HelloWorld : SceneObjectScript {
 
