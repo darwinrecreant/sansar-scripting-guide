@@ -16,7 +16,7 @@ public class HelloWorld : SceneObjectScript {
 }
 ```
 
-The main class of a script must extend `SceneObjectScript` and include an `Init()` function. Init is where the script bootstraps when the scene instance is first started, when the object with the script is first rezzed.
+The main class of a script must extend `SceneObjectScript` and include an `Init()` function. Init is where the script bootstraps when the scene instance is first started, or when the object with the script is first rezzed.
 
 ## Mutli-part Scripts
 
@@ -56,11 +56,11 @@ You can split your script project into multiple files. This can be uploaded to S
 }
 ```
 
-This is especially handy for orginizating large projects, or including scripts between projects, or more commonly including the `LibraryBase.cs` provided by Sansar for creating [Script Library (aka simple scripts)](simple-scripts.md) compatible scripts.
+This is especially handy for orginizating large projects, or including scripts between projects, or more commonly including the `LibraryBase.cs` provided by Sansar for creating [Script Library](simple-scripts.md) compatible scripts (aka Simple Scripts).
 
 ## Script Parameters
 
-Scripts can have parameters that are exposed in the scene editor when attaching the scripting to an object, which basically allows for adding user configuration to scripts before the script is excuted in the experience.
+Scripts can have parameters that are exposed in the scene editor when attaching the scripting to an object, which basically allows for adding user configuration to scripts before the script is executes in the experience.
 
 Parameters are basically public variables on the main `SceneObjectScript` class, that must follow a few requirements. An example usage of a parameter is as follows:
 
@@ -68,7 +68,7 @@ Parameters are basically public variables on the main `SceneObjectScript` class,
 using Sansar.Simulation;
 
 [DisplaName("My Message")]
-[DefaultValue("Hello Worlds")]
+[DefaultValue("Hello World")]
 public string Message;
 
 public class HelloWorld : SceneObjectScript {
@@ -83,3 +83,27 @@ public class HelloWorld : SceneObjectScript {
 The requirements for a valid parameters are:
 - The variable must be public
 - The variable must be one of the primitive types (`string`, `int`, `bool`, `float`, `Vector`, `Quaternion`), a resource type like `SoundResource` which would just result in an inventory picker, or a List of one of the allowed types, such as `List<string>`, which would result in a multi value input.
+
+## Debugging
+
+When visiting an experience, it is possible to see the debug console by pressing `Ctrl + D` which is visible only the the scene owner.
+
+Any errors, warnings, or notices will be visible in this console.
+
+You can write your own console messages using `Log.Write()`. For example:
+
+```csharp
+using Sansar.Simulation;
+[DefaultScript]
+public class HelloWorld : SceneObjectScript {
+
+  public override void Init() {
+    Log.Write("Log message");
+    Log.Write(LogLevel.Warning, "Log warning");
+    Log.Write(LogLevel.Error, "Log error");
+  }
+  
+}
+```
+
+It is best practice to write your debug messages in console instead of print in chat.
