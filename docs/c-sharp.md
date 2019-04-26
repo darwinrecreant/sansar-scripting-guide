@@ -99,3 +99,5 @@ public class HelloWorld : SceneObjectScript {
 ## Scope and Inline Functions
 
 ## Logic Gates and Operators
+
+## Namespaces and Using
