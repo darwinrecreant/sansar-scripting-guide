@@ -37,5 +37,5 @@ User controls can be subscribed to using `User.Client.Subscribe()`. Currently th
 | `SelectRight` | <kbd>&#x2192;</kbd> | | | |
 | `SelectLeft` | <kbd>&#x2190;</kbd> | | | |
 | `KeypadEnter` | Keypad <kbd>Enter</kbd> | | | |
-| `Keypad[0-9]` | Keypad <kbd>0 - 9</kbd> | | | For example `Keypad5` is triggered when <kbd>5</kbd> is pressed in the keypad area of the keyboard|
-| `Action[0-9]` | <kbd>0 - 9</kbd> | | | For example `Action3` is triggered when <kbd>3</kbd> is pressed in the numbers area of the keyboard|
+| `Keypad[0-9]` | Keypad <kbd>0</kbd> - <kbd>9</kbd> | | | For example `Keypad5` is triggered when <kbd>5</kbd> is pressed in the keypad area of the keyboard|
+| `Action[0-9]` | <kbd>0</kbd> - <kbd>9</kbd> | | | For example `Action3` is triggered when <kbd>3</kbd> is pressed in the numbers area of the keyboard|
