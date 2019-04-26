@@ -67,11 +67,11 @@ Parameters are basically public variables on the main `SceneObjectScript` class,
 ```csharp
 using Sansar.Simulation;
 
-[DisplaName("My Message")]
-[DefaultValue("Hello World")]
-public string Message;
-
 public class HelloWorld : SceneObjectScript {
+
+  [DisplaName("My Message")]
+  [DefaultValue("Hello World")]
+  public string Message;
 
   public override void Init() {
     Log.Write(Message);
@@ -94,7 +94,7 @@ You can write your own console messages using `Log.Write()`. For example:
 
 ```csharp
 using Sansar.Simulation;
-[DefaultScript]
+
 public class HelloWorld : SceneObjectScript {
 
   public override void Init() {
