@@ -11,7 +11,7 @@ Visual Studio Code (vscode), not to be confused with Visual Studio, is a lightwe
 6. Edit `get-sansar-lib.bat` and make sure the directory path in robocopy commands point to your Sansar installation on you computer, if it does not then change it and save.
 7. Double click `get-sansar-lib.bat` (outside vscode) in the downloaded workspace in step 1, this will copy Sansar assemblies (dlls) and Script Library code to your local directory and will allow autcompletion of api and easily include `LibraryBase.cs` in your projects.
 8. Open vscode in the downloaded workspace, open the terminal (<kbd>Ctrl</kbd> + <kbd>~</kbd>), and type `dotnet restore`
-9. Close and reopen vscode. You can now create your first [Sansar script](sansar-scripts.md)
+9. Close and reopen vscode. You can now create your first [Sansar script](sansar-scripts.md).
 
 ## Every Sansar Client Update
 1. Double click `get-sansar-lib.bat` (outside vscode)
