@@ -19,4 +19,4 @@ Visual Studio Code (vscode), not to be confused with Visual Studio, is a lightwe
 3. Close and reopen vscode
 
 ## Every New Project
-1. Create a folder in your workspace, and create your C# files in that. If you need to include scripts from other projects, just add a .json file with paths pointing your files, which can be uploaded to Sansar for multi file scripts.
+1. Create a folder in your workspace, and create your C# files in that. If you need to include scripts from other projects, just add a .json file with paths pointing to your files, which can be uploaded to Sansar for multi file scripts.
