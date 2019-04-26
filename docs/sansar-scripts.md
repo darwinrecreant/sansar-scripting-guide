@@ -71,7 +71,7 @@ using Sansar.Simulation;
 
 public class HelloWorld : SceneObjectScript {
 
-  [DisplaName("My Message")]
+  [DisplayName("My Message")]
   [DefaultValue("Hello World")]
   public string Message;
 

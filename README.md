@@ -9,7 +9,7 @@ This is a guide for C# scripting in Sansar, and serves as a temporary repository
 
 ## Intro to C#
 
-C# (C Sharp) is an object-oriented programming (OOP) language developed by Microsoft that is primarily used for creating games. Many popular gaming frameworks, such as Unity, use C#, and this is also the lanugage used for Sansar scripts.
+C# (C Sharp) is an object-oriented programming (OOP) language developed by Microsoft that is primarily used for creating games. Many popular gaming frameworks, such as Unity, use C#, and this is also the language used for Sansar scripts.
 
 - [Setting up Visual Studio Code](/docs/vscode.md)
 - [C# Concepts](/docs/c-sharp.md)
@@ -28,7 +28,7 @@ User controls can be subscribed to using `User.Client.Subscribe()`. Currently th
 |---------|:-------:|:----:|:----:|-------|
 | `Trigger` | mouse <kbd>click</kbd> | <kbd>trigger</kbd> | <kbd>trigger</kbd> | Used as the "fire" control. |
 | `PrimaryAction` | <kbd>F</kbd> | <kbd>grip</kbd> | <kbd>grip</kbd> | Used for picking up / dropping things. If the object has the "Stick to hand" flag turned off, then mouse click will also drop the item on desktop.|
-| `SecondaryAction` | <kbd>R</kbd> | center <kbd>click</kbd> | <kbd>A</kbd>/<kbd>X</kbd> | Normally used as the "gun reload" control|
+| `SecondaryAction` | <kbd>R</kbd> | center <kbd>click</kbd> | <kbd>A</kbd> / <kbd>X</kbd> | Normally used as the "gun reload" control|
 | `Confirm` | <kbd>Enter</kbd> | | <kbd>B</kbd> | |
 | `Cancel` | <kbd>Esc</kbd> | | <kbd>Y</kbd> | |
 | `Modifier`| <kbd>Shift</kbd> | | | Used for toggling running on/off |
