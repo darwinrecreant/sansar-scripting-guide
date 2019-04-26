@@ -68,6 +68,7 @@ Parameters are basically public variables on the main `SceneObjectScript` class,
 
 ```csharp
 using Sansar.Simulation;
+using Sansar.Script;
 
 public class HelloWorld : SceneObjectScript {
 
