@@ -19,6 +19,7 @@ C# (C Sharp) is an object-oriented programming (OOP) language developed by Micro
 Sansar scripts use a custom subset of C# that restict the usage to only whitelisted native libraries, for both security and performance reasons. Normally, if a native library is too useful but fails either these two requirements, than a custom implenetation will be provided with some limitations applied; `HttpClient` is a prime example of this.
 
 - [Getting started with Sansar scripts](/docs/sansar-scripts.md)
+- [Creating your own simple scripts](/docs/simple-scripts.md)
 
 ## Sansar Controls
 
