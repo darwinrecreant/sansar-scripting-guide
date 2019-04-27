@@ -2,7 +2,7 @@
 
 This is a guide for C# scripting in Sansar, and serves as a temporary repository of tips and hints for api until we have an official wiki to use.
 
-1. [Intro to C#](#intro-to-c&#35;)
+1. [Intro to C#](#intro-to-c)
 2. [Intro to Sansar Scripts](#intro-to-sansar-scripts)
 3. [Sansar Controls](#sansar-controls)
 
