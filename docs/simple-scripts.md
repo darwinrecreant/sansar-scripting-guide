@@ -1,8 +1,8 @@
 # Creating Scirpt Library Compatible Scripts
 
-Script Library scripts (formerly known as Simple Scripts) are a set of scripts provided with every Sansar installation that define a common communication protocol between scipts, and provides some starter scripts for interaction with objects in-world.
+Script Library scripts (formerly known as Simple Scripts) are a set of scripts provided with every Sansar installation that define a common communication protocol between scripts, and provides some starter scripts for interaction with objects in-world.
 
-The library comes bundled with `LibraryBase.cs` which allows to use Library's communication protocol in your own scripts.
+The library comes bundled with `LibraryBase.cs` which allows to use the Library's communication protocol in your own scripts.
 
 ## Project Structure
 
@@ -32,7 +32,7 @@ workspace/
 
 ## Script Contents
 
-To make the script compatible with the Script Library, simply extend `SceneObjectBase` instead of `SceneObjectScript` and use `SimpleInit()` instead of `Init()` as your script bootstrap method. The bare mininum to create the scipt is as follows:
+To make the script compatible with the Script Library, simply extend `SceneObjectBase` instead of `SceneObjectScript` and use `SimpleInit()` instead of `Init()` as your script bootstrap method. The bare mininum to create the script is as follows:
 
 ```csharp
 using ScriptLibrary;
@@ -97,7 +97,9 @@ If StartEnabled is false then the script will not respond to interactions until 
     void Subscribe(ScriptEventData sed) {
       // if (!string.IsNullOrWhiteSpace(MyCustomEvent)) {
       //   subscription += SubscribeToAll(MyCustomEvent, (ScriptEventData data) => {
-
+      //     ISimpleData sd = data.Data.AsInterface<ISimpleData>();
+      //     if (sd == null) return;
+      //
       //   });
       // }
     }
