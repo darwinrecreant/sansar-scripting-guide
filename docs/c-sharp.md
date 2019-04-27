@@ -108,7 +108,7 @@ public class HelloWorld : SceneObjectScript
 
 ## Inheritance and Interfaces
 
-A core concept of OOP is the notion of inheritance, meaning a cetain class can "inherit" the properties and methods of another class by `extend`ing it. Extending a class allows for having different variations of the same core type. A common example used in teaching inheritance is with the animal kingdom, where you have a parent class called `Animal`, and then you would have other child classes extending it such as `Mammal` or `Reptile`, and then go down even further in the hierarchy where `Canine` or `Feline` extend `Mammal`. In the context of Sansar and scripting games, you could make an class `Npc`, and then extend that into `FriendlyNpc` and `EnemyNpc`. The benfit in this example, is that an NPC may have methods and properties that are common in both enemy and friendly npc, such as `Name` or `SayInChat()`, but enemy NPC may have a method for `Attack()` while the friendly NPC does not. This concept saves you from having to copy paste functionality between classes and generally makes for much cleaner and easier to maintain code.
+A core concept of OOP is the notion of inheritance, meaning a cetain class can "inherit" the properties and methods of another class by `extend`ing it. Extending a class allows for having different variations of the same core type. A common example used in teaching inheritance is with the animal kingdom, where you have a parent class called `Animal`, and then you would have other child classes extending it such as `Mammal` or `Reptile`, and then go down even further in the hierarchy where `Canine` or `Feline` extend `Mammal`. In the context of Sansar and scripting games, you could make a class `Npc`, and then extend that into `FriendlyNpc` and `EnemyNpc`. The benfit in this example, is that an NPC may have methods and properties that are common in both enemy and friendly npc, such as `Name` or `SayInChat()`, but enemy NPC may have a method for `Attack()` while the friendly NPC does not. This concept saves you from having to copy paste functionality between classes and generally makes for much cleaner and easier to maintain code.
 
 So implementing our NPC example above would look something like this:
 
@@ -145,9 +145,9 @@ Then you could use the above classes like so:
 
 ```csharp
 EnemeyNpc zombie = new EnemyNpc();
-zombie.Name = "Jane the neigbor"
+zombie.Name = "Jane the neighbor"
 
-FriendNpc randomSurvivor = new FriendlyNpc();
+FriendlyNpc randomSurvivor = new FriendlyNpc();
 randomSurvivor.Name = "Mary the doctor";
 
 zombie.SayInChat("hhmmhhm....");
