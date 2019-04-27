@@ -37,9 +37,11 @@ To make the script compatible with the Script Library, simply extend `SceneObjec
 ```csharp
 using ScriptLibrary;
 
-public class HelloWorld : SceneObjectBase {
+public class HelloWorld : SceneObjectBase 
+{
 
-  protected override void SimpleInit() {
+  protected override void SimpleInit() 
+  {
     Log.Write("Hello World");
   }
 
@@ -53,8 +55,8 @@ However, this does not use the library's event system yet so there is nothing sp
 `LibraryBase.cs` does alot of event processing as well as handle the protocol's event naming scheme, and using it will allow your users to set event targets in script parameters like they do in other Script Library scripts.
 
 There are two main functions to handle these events:
-- `SubscribeToAll()` - This will subscribes to event targets from parameters
-- `SendToAll()` - This will broadcast an event target
+- `SubscribeToAll()` - This will subscribe to event targets from parameters
+- `SendToAll()` - This will broadcast event targets
 
 It would be good practice to also include enable/disable events as do all Script Library scripts do.
 
@@ -65,9 +67,11 @@ using System;
 using Sansar.Script;
 using ScriptLibrary;
 
-namespace Templates {
+namespace Templates 
+{
 
-  public class ScriptLibraryTemplate : SceneObjectBase {
+  public class ScriptLibraryTemplate : SceneObjectBase 
+  {
 
     [Tooltip("Enable responding to events for this script")]
     [DefaultValue("_enable")]
@@ -87,24 +91,30 @@ If StartEnabled is false then the script will not respond to interactions until 
 
     Action subscription = null;
 
-    protected override void SimpleInit() {
+    protected override void SimpleInit() 
+    {
       if (StartEnabled) Subscribe(null);
 
       SubscribeToAll(EnableEvent, Subscribe);
       SubscribeToAll(DisableEvent, Unsubscribe);
     }
 
-    void Subscribe(ScriptEventData sed) {
-      // if (!string.IsNullOrWhiteSpace(MyCustomEvent)) {
-      //   subscription += SubscribeToAll(MyCustomEvent, (ScriptEventData data) => {
+    void Subscribe(ScriptEventData sed) 
+    {
+      // if (!string.IsNullOrWhiteSpace(MyCustomEvent)) 
+      // {
+      //   subscription += SubscribeToAll(MyCustomEvent, (ScriptEventData data) => 
+      //   {
       //     ISimpleData sd = data.Data.AsInterface<ISimpleData>();
       //     if (sd == null) return;
       //
       //   });
       // }
     }
-    void Unsubscribe(ScriptEventData sed) {
-      if (subscription != null) {
+    void Unsubscribe(ScriptEventData sed) 
+    {
+      if (subscription != null) 
+      {
         subscription();
         subscription = null;
       }

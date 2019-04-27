@@ -53,11 +53,13 @@ MyClass someObject = new MyClass();
 And you define a custom class like so:
 
 ```csharp
-public class MyClass {
+public class MyClass 
+{
 
   string MyMessage = "Hello World";
 
-  public string GetMessage() {
+  public string GetMessage() 
+  {
     return MyMessage;
   }
 
@@ -79,19 +81,23 @@ And for the complete code that is usable in Sansar:
 ```csharp
 using Sansar.Simulation;
 
-public class MyClass {
+public class MyClass 
+{
 
   string MyMessage = "Hello World";
 
-  public string GetMessage() {
+  public string GetMessage() 
+  {
     return MyMessage;
   }
 
 }
 
-public class HelloWorld : SceneObjectScript {
+public class HelloWorld : SceneObjectScript 
+{
 
-  public override void Init() {
+  public override void Init() 
+  {
     MyClass someObject = new MyClass();
 
     Log.Write(someObject.GetMessage());

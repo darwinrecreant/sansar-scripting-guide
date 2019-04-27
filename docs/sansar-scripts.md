@@ -9,9 +9,11 @@ The bare minimum in a Sansar script is the following:
 ```csharp
 using Sansar.Simulation;
 
-public class HelloWorld : SceneObjectScript {
+public class HelloWorld : SceneObjectScript 
+{
 
-  public override void Init() {
+  public override void Init() 
+  {
     Log.Write("Hello World");
   }
   
@@ -29,17 +31,21 @@ using Sansar.Simulation;
 using Sansar.Script;
 
 [DefaultScript]
-public class HelloWorld : SceneObjectScript {
+public class HelloWorld : SceneObjectScript 
+{
 
-  public override void Init() {
+  public override void Init() 
+  {
     Log.Write("Hello World");
   }
   
 }
 
-public class HelloWorld2 : SceneObjectScript {
+public class HelloWorld2 : SceneObjectScript 
+{
 
-  public override void Init() {
+  public override void Init() 
+  {
     Log.Write("Hello World2");
   }
   
@@ -71,13 +77,15 @@ Parameters are public variables on the main `SceneObjectScript` class, that must
 using Sansar.Simulation;
 using Sansar.Script;
 
-public class HelloWorld : SceneObjectScript {
+public class HelloWorld : SceneObjectScript 
+{
 
   [DisplayName("My Message")]
   [DefaultValue("Hello World")]
   public string Message;
 
-  public override void Init() {
+  public override void Init() 
+  {
     Log.Write(Message);
   }
   
@@ -98,9 +106,11 @@ You can write your own console messages using `Log.Write()`. For example:
 using Sansar.Simulation;
 using Sansar.Script;
 
-public class HelloWorld : SceneObjectScript {
+public class HelloWorld : SceneObjectScript 
+{
 
-  public override void Init() {
+  public override void Init() 
+  {
     Log.Write("Log message");
     Log.Write(LogLevel.Warning, "Log warning");
     Log.Write(LogLevel.Error, "Log error");
