@@ -63,9 +63,9 @@ This is especially handy for orginizating large projects, or including scripts b
 
 ## Script Parameters
 
-Scripts can have parameters that are exposed in the scene editor when attaching the scripting to an object, which basically allows for adding user configuration to scripts before the script executes in the experience.
+Scripts can have parameters that are exposed in the scene editor when attaching the script to an object, which basically allows for adding user configuration to scripts before the script executes in the experience.
 
-Parameters are basically public variables on the main `SceneObjectScript` class, that must follow a few requirements. An example usage of a parameter is as follows:
+Parameters are public variables on the main `SceneObjectScript` class, that must follow a few requirements. An example usage of a parameter is as follows:
 
 ```csharp
 using Sansar.Simulation;
@@ -90,7 +90,7 @@ The requirements for a valid parameters are:
 
 ## Debugging
 
-When visiting an experience, it is possible to see the debug console by pressing `Ctrl + D` which is visible only to the scene owner. Any errors, warnings, or notices will be visible in this console.
+When visiting an experience, it is possible to see the debug console by pressing (<kbd>Ctrl</kbd> + <kbd>D</kbd>) which is visible only to the scene owner. Any errors, warnings, or notices will be visible in this console.
 
 You can write your own console messages using `Log.Write()`. For example:
 
@@ -109,4 +109,4 @@ public class HelloWorld : SceneObjectScript {
 }
 ```
 
-It is best practice to write your debug messages in console instead of print in chat.
+It is best practice to write your debug messages in console instead of print to chat.

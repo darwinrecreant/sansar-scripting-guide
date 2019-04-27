@@ -4,7 +4,7 @@
 |-|-|
 |1|[Objects](#objects)|
 |2|[Classes](#classes)|
-|3|[Inheritence](#Inheritence)|
+|3|[Inheritance](#Inheritance)|
 |4|[Method Arguments and Contructors](#Method-Arguments-and-Contructors)|
 |5|[Generic Types](#Generic-Types)|
 |6|[Attributes](#Attributes)|
@@ -100,7 +100,7 @@ public class HelloWorld : SceneObjectScript {
 }
 ```
 
-## Inheritence
+## Inheritance
 
 ## Method Arguments and Contructors
 
