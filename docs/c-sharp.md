@@ -1,5 +1,7 @@
 # C Sharp Basics
 
+C# is very complex language and there are a lot of concepts to learn. This guide is not ment to teach you the whole breadth of C# concepts, but just the concepts I ran into in my first 24 hours of scripting in Sansar.
+
 |#|Table of Contents|
 |-|-|
 |1|[Objects](#objects)|
@@ -328,6 +330,18 @@ if (isKill)
 ```
 
 ## Generic Types
+
+Classes be defined with additional types as arguments, generally when you have a "type of types". For example, a `List` type has to be declared with another type, such as `List<string>`, which is a "list of strings", or `Dictionary<string, int>` (dictionary is key/value map) which means a "map of strings to ints". Creating your own generic classes is a bit advanced so I will not cover that here.
+
+Methods can also accept types, such as `AsInterface()` in `Reflective` classes, such as:
+
+```csharp
+SubscribeToAll(MyEvent, (ScriptEventData data) => 
+{
+        ISimpleData sd = data.Data?.AsInterface<ISimpleData>();
+});
+
+```
 
 ## Attributes
 
