@@ -7,7 +7,7 @@ C# is very complex language and there are a lot of concepts to learn. This guide
 |1|[Objects](#objects)|
 |2|[Classes](#classes)|
 |3|[Inheritance and Interfaces](#Inheritance-and-Interfaces)|
-|4|[Method Arguments and Contructors](#Method-Arguments-and-Contructors)|
+|4|[Method Arguments and Constructors](#Method-Arguments-and-Constructors)|
 |5|[Generic Types](#Generic-Types)|
 |6|[Attributes](#Attributes)|
 |7|[Scope and Inline Functions](#Scope-and-Inline-Functions)|
@@ -203,7 +203,7 @@ announcer = new FriendlyNpc();
 announcer.SayInChat("Who said that?");
 ```
 
-## Method Arguments and Contructors
+## Method Arguments and Constructors
 
 Properties are variables inside the class, and methods are functions inside the class. You could think of methods as being "verbs" that an object can do. Though methods become alot more useful when you give them parameters, or `arguments`, to use in what you want the object to do. For example, in the context of game making, you may have a "health" property which tracks the player's hitpoints, and you may have a `WasHit()` method that affects the health, but it would be more useful if you could say how much damage to apply, so you could add damage amount as an argument like `WasHit(int damage)`. Then you could use this argument like any other variable inside the method. So an example of this would be:
 
@@ -245,7 +245,7 @@ class Player
 
 ### Constructors
 
-`Constructor`s are a special kind of method in a class that will be called when the object is created with `new`. They need to be named with the same name of the class. Contructors are normally used to defined the initial values of the object. For example:
+`Constructor`s are a special kind of method in a class that will be called when the object is created with `new`. They need to be named with the same name of the class. Constructors are normally used to defined the initial values of the object. For example:
 
 ```csharp
 class Player { 
@@ -338,7 +338,7 @@ Methods can also accept types, such as `AsInterface()` in `Reflective` classes, 
 ```csharp
 SubscribeToAll(MyEvent, (ScriptEventData data) => 
 {
-        ISimpleData sd = data.Data?.AsInterface<ISimpleData>();
+  ISimpleData sd = data.Data?.AsInterface<ISimpleData>();
 });
 
 ```
