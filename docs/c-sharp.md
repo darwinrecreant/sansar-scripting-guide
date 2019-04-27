@@ -331,7 +331,7 @@ if (isKill)
 
 ## Generic Types
 
-Classes be defined with additional types as arguments, generally when you have a "type of types". For example, a `List` type has to be declared with another type, such as `List<string>`, which is a "list of strings", or `Dictionary<string, int>` (dictionary is key/value map) which means a "map of strings to ints". Creating your own generic classes is a bit advanced so I will not cover that here.
+Classes can be defined with additional types as arguments, generally when you have a "type of types". For example, a `List` type has to be declared with another type, such as `List<string>`, which is a "list of strings", or `Dictionary<string, int>` (dictionary is key/value map) which means a "map of strings to ints". Creating your own generic classes is a bit advanced so I will not cover that here.
 
 Methods can also accept types, such as `AsInterface()` in `Reflective` classes, such as:
 
@@ -344,6 +344,23 @@ SubscribeToAll(MyEvent, (ScriptEventData data) =>
 ```
 
 ## Attributes
+
+Attributes are meta properties that generally do not need to excute during runtime, and is added on top of propeties, methods, and classes. This is mostly needed in Sansar scripts when defining scripts and their parameters, which you can learn about [here](sansar-scripts.md).
+
+An attribute is encapsulated in square brackets and looks something like this:
+
+```csharp
+[DefaultScript]
+[DisplayName("My Script")]
+public class MyScript : SceneObjectScript {
+
+  public override void Init() 
+  {
+
+  }
+
+}
+```
 
 ## Scope and Inline Functions
 
