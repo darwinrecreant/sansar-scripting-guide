@@ -108,6 +108,97 @@ public class HelloWorld : SceneObjectScript
 
 ## Inheritance and Interfaces
 
+A core concept of OOP is the notion of inheritance, meaning a cetain class can "inherit" the properties and methods of another class by `extend`ing it. Extending a class allows for having different variations of the same core type. A common example used in teaching inheritance is with the animal kingdom, where you have a parent class called `Animal`, and then you would have other child classes extending it such as `Mammal` or `Reptile`, and then go down even further in the hierarchy where `Canine` or `Feline` extend `Mammal`. In the context of Sansar and scripting games, you could make an class `Npc`, and then extend that into `FriendlyNpc` and `EnemyNpc`. The benfit in this example, is that an NPC may have methods and properties that are common in both enemy and friendly npc, such as `Name` or `SayInChat()`, but enemy NPC may have a method for `Attack()` while the friendly NPC does not. This concept saves you from having to copy paste functionality between classes and generally makes for much cleaner and easier to maintain code.
+
+So implementing our NPC example above would look something like this:
+
+```csharp
+public abstract class Npc 
+{
+  public string Name;
+
+  public void SayInChat(string message) 
+  {
+    // Say in chat code
+  }
+}
+
+public class EnemeyNpc : Npc 
+{
+  public void Attack()
+  {
+    // Attack code
+  }
+}
+
+public class FriendlyNpc : Npc
+{
+  public void AskForQuest() {
+    // Ask for quest code
+  }
+}
+```
+
+The `abstract` keyword in the code above means this class cannot be made into an object on its own, and that only its child classes can.
+
+Then you could use the above classes like so:
+
+```csharp
+EnemeyNpc zombie = new EnemyNpc();
+zombie.Name = "Jane the neigbor"
+
+FriendNpc randomSurvivor = new FriendlyNpc();
+randomSurvivor.Name = "Mary the doctor";
+
+zombie.SayInChat("hhmmhhm....");
+zombie.Attack();
+randomSuvivor.SayInChat("Runnnn!");
+```
+
+`Interface`s can also be added to classes, and are used to define available methods that are common between several unrelated classes. This allows to have a common "interface" on objects that you may not care about about their underlying classes. So continuing our example above, a possible interface we could have is `CanSpeak` that expects the class to have `SayInChat()` method. So a possible example of this is:
+
+```csharp
+interface CanSpeak; 
+{
+  void SayInChat(string message);
+}
+
+public abstract class Npc : CanSpeak
+{
+  public string Name;
+
+  public void SayInChat(string message) 
+  {
+    // Say in chat code
+  }
+}
+
+public class FriendlyNpc : Npc
+{
+  public void AskForQuest() {
+    // Ask for quest code
+  }
+}
+
+public class SpeakerPhone : CanSpeak {
+
+  public void SayInChat(string message) 
+  {
+    // Say in chat code
+  }
+
+}
+```
+
+And you could use it like so:
+
+```csharp
+CanSpeak announcer = new SpeakerPhone();
+announcer.SayInChat("Welcome");
+announcer = new FriendlyNpc();
+announcer.SayInChat("Who said that?");
+```
+
 ## Method Arguments and Contructors
 
 ## Generic Types
