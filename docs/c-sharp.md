@@ -155,7 +155,9 @@ zombie.Attack();
 randomSuvivor.SayInChat("Runnnn!");
 ```
 
-`Interface`s can also be added to classes, and are used to define available methods that are common between several unrelated classes. This allows to have a common "interface" on objects that you may not care about about their underlying classes. So continuing our example above, a possible interface we could have is `CanSpeak` that expects the class to have `SayInChat()` method. So a possible example of this is:
+### Interfaces
+
+`Interface`s can also be added to classes, and are used to define available methods that are common between several unrelated classes. This allows to have a common "interface" on objects that you may not care about their underlying classes. So continuing our example above, a possible interface we could have is `CanSpeak` that expects the class to have `SayInChat()` method. So a possible example of this is:
 
 ```csharp
 interface CanSpeak; 
@@ -190,7 +192,7 @@ public class SpeakerPhone : CanSpeak {
 }
 ```
 
-And you could use it like so:
+Notice that `FriendlyNpc` ineherited the `CanSpeak` interface from `Npc`. Then you could use it like so:
 
 ```csharp
 CanSpeak announcer = new SpeakerPhone();
@@ -200,6 +202,130 @@ announcer.SayInChat("Who said that?");
 ```
 
 ## Method Arguments and Contructors
+
+Properties are variables inside the class, and methods are functions inside the class. You could think of methods as being "verbs" that an object can do. Though methods become alot more useful when you give them parameters, or `arguments`, to use in what you want the object to do. For example, in the context of game making, you may have a "health" property which tracks the player's hitpoints, and you may have a `WasHit()` method that affects the health, but it would be more useful if you could say how much damage to apply, so you could add damage amount as an argument like `WasHit(int damage)`. Then you could use this argument like any other variable inside the method. So an example of this would be:
+
+```csharp
+class Player 
+{
+
+  int HitPoints = 100;
+
+  public void WasHit(int damage) 
+  {
+    Hitpoints = Hitpoints - damage;
+  }
+
+}
+```
+
+This can be extended to add more arguments such as adding a "distance" argument that will not apply the damage if the hitter was too far away, and return `true` on succeful hit, and false if not:
+
+```csharp
+class Player 
+{
+
+  int HitPoints = 100;
+
+  public bool WasHit(int damage, float distance) 
+  {
+    if (distance > 30) 
+    {
+      return false;
+    }
+
+    Hitpoints = Hitpoints - damage;
+    return true;
+  }
+
+}
+```
+
+### Constructors
+
+`Constructor`s are a special kind of method in a class that will be called when the object is created with `new`. They need to be named with the same name of the class. Contructors are normally used to defined the initial values of the object. For example:
+
+```csharp
+class Player { 
+
+  int Hitpoints;
+
+  public Player(int initialHitpoints) 
+  {
+    Hitpoints = initialHitpoints;
+  }
+
+  public bool WasHit(int damage, float distance) 
+  {
+    if (distance > 30) 
+    {
+      return false;
+    }
+
+    Hitpoints = Hitpoints - damage;
+    return true;
+  }
+
+}
+```
+
+Which then can be used like so: 
+
+```csharp
+Player player1 = new Player(100);
+```
+
+### Out Arguments
+
+Another type of argument you will run into in Sansar api often is `out` arguments, which are not input parameters, but just variables that need to be set inside the method which then can be used outside the method. This is handy if you need the `return` value for something else but need additional output values to get from the method. For example:
+
+```csharp
+class Player 
+{
+
+  int Hitpoints;
+
+  public Player(int initialHitpoints) 
+  {
+    Hitpoints = initialHitpoints;
+  }
+
+  public bool WasHit(int damage, float distance, out bool isDead) 
+  {
+    if (disatnce > 30) 
+    {
+      isDead = false;
+      return false;
+    }
+
+    Hitpoints = Hitpoints - damage;
+
+    if (HitPoints <= 0) 
+    {
+      isDead = true;
+    }
+    return true;
+  }
+
+}
+```
+
+In the example above I added more logic to `WasHit()` that will also set the `isDead` variable to true if the player has less than (or equal to) 0 hitpoints. This can then be used like so:
+
+```csharp
+Player player1 = new Player(100);
+
+bool isKill;
+player1.WasHit(40, 20, out isKill); // damage 50, isKill is false
+player1.WasHit(50, 40, out isKill); /// too far away, no damage, isKill is false
+player1.wasHit(70, 4, out isKill); // damage 70, isKill is true
+
+if (isKill)
+{
+  // player was killed code
+}
+
+```
 
 ## Generic Types
 
