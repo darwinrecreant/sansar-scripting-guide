@@ -1,4 +1,4 @@
-# Creating Scirpt Library Compatible Scripts
+# Creating Script Library Compatible Scripts
 
 Script Library scripts (formerly known as Simple Scripts) are a set of scripts provided with every Sansar installation that define a common communication protocol between scripts, and provides some starter scripts for interaction with objects in-world.
 
