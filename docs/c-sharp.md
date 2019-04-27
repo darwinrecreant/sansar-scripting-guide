@@ -1,8 +1,20 @@
 # C Sharp Basics
 
+|#|Table of Contents|
+|-|-|
+|1|[Objects](#objects)|
+|2|[Classes](#classes)|
+|3|[Inheritence](#Inheritence)|
+|4|[Method Arguments and Contructors](#Method-Arguments-and-Contructors)|
+|5|[Generic Types](#Generic-Types)|
+|6|[Attributes](#Attributes)|
+|7|[Scope and Inline Functions](#Scope-and-Inline-Functions)|
+|8|[Logic Gates and Operators](#Logic-Gates-and-Operators)|
+|9|[Namespaces and Using](#Namespaces-and-Using)|
+
 ## Objects
 
-C# is and object-oriented programing language (OOP), which means it treats everything as an "object". An object is basically some value, or `state`, that is wrapped with a bunch of helper functions, or `methods`, that do something with this state. An object's methods have to be defined in advance in `classes`, which are a sort of blueprint to the value and what it can do. What class an object is made of is known as it's `type`. A `string` is a type, so is `float`, `int` or any other class name available in your current environment.
+C# is an object-oriented programing language (OOP), which means it treats everything as an "object". An object is basically some value, or `state`, that is wrapped with a bunch of helper functions, or `methods`, that do something with this state. An object's methods have to be defined in advance in `classes`, which are a sort of blueprint to the value and what it can do. What class an object is made of is known as it's `type`. A `string` is a type, so is `float`, `int` or any other class name available in your current environment.
 
 So, if I have a piece of text, or `string`, and want to make it all upper case, I can write something like:
 
