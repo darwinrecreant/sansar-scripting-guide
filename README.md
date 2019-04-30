@@ -21,6 +21,35 @@ Sansar scripts use a custom subset of C# that restict the usage to only whitelis
 - [Getting started with Sansar scripts](/docs/sansar-scripts.md)
 - [Creating Simple Scripts](/docs/simple-scripts.md)
 
+## Limits
+
+### Environment Limits
+|Aspect|Limit|
+|-|-|
+|Display name length|32|
+|Visitors per experience|unlimited|
+|Visitors per instance|35|
+|Instances per experience|unlimited|
+|Empty experience keep-alive|15mins|
+
+### Scripting Throttles
+
+|Function|Max|Timeframe|
+|-|:-:|:-:|
+|Rezzing|100|1s|
+|Local teleport|90|1s|
+|All physics functions|90|1s|
+|Set media url|7|10s|
+|Chat messages|64|1s|
+
+### Scripting Limits
+|Limit|Max|
+|-|:-:|
+|Concurrent coroutines|256|
+|Script memory|32mb|
+|Scene script memory|32mb|
+|Script upload size|1mb|
+
 ## Sansar Controls
 
 User controls can be subscribed to using `User.Client.Subscribe()`. Currently there is no way to block Sansar native controls when listening to them.
