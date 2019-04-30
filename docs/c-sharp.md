@@ -413,7 +413,7 @@ Action inlineFunction = () =>
 
 ## Logic Gates and Operators
 
-The core of all programs is logic gates and if statements. Logic here means given two true or false values, what should the combination of the the two be, in the form of a 3rd true/false value. The most basic gates that are easy to understand are `NOT`, `AND`, and `OR`, which behave just like in plain Englis. In C# you write NOT as `!`, AND as `&&`, and OR as `||`, and you use them like so:
+The core of all programs is logic gates and if statements. Logic here means given two true or false values, what should the combination of the the two be, in the form of a 3rd true/false value. The most basic gates that are easy to understand are `NOT`, `AND`, and `OR`, which behave just like in plain English. In C# you write NOT as `!`, AND as `&&`, and OR as `||`, and you use them like so:
 
 ```csharp
 bool a = true;

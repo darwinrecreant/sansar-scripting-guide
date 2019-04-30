@@ -2,9 +2,12 @@
 
 This is a guide for C# scripting in Sansar, and serves as a temporary repository of tips and hints for api until we have an official wiki to use.
 
-1. [Intro to C#](#intro-to-c)
-2. [Intro to Sansar Scripts](#intro-to-sansar-scripts)
-3. [Sansar Controls](#sansar-controls)
+|#|Section|
+|-:|-|
+|1|[Intro to C#](#intro-to-c)|
+|2|[Intro to Sansar Scripts](#intro-to-sansar-scripts)|
+|3|[Limits](#limits)|
+|4|[Sansar Controls](#sansar-controls)|
 
 
 ## Intro to C#
@@ -24,8 +27,8 @@ Sansar scripts use a custom subset of C# that restict the usage to only whitelis
 ## Limits
 
 ### Environment Limits
-|Aspect|Limit|
-|-|-|
+|Limit|Max|
+|-|:-:|
 |Display name length|32|
 |Visitors per experience|unlimited|
 |Visitors per instance|35|
@@ -39,7 +42,7 @@ Sansar scripts use a custom subset of C# that restict the usage to only whitelis
 |Rezzing|100|1s|
 |Local teleport|90|1s|
 |All physics functions|90|1s|
-|Set media url|7|10s|
+|Set media url|7|5s|
 |Chat messages|64|1s|
 
 ### Scripting Limits
