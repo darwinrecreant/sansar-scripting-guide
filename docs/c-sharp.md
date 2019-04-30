@@ -455,7 +455,7 @@ Given `int a = 1;` and `int b = 2;`, here are the available operators:
 |`>`|greater than|`a > b`|`false`|
 |`>=`|greater than or equals to|`a >= b`|`false`|
 |`<`|smaller than|`a < b`|`true`|
-|`<=`|smaller than or eqauls to|`a <= b`|`true`|
+|`<=`|smaller than or equals to|`a <= b`|`true`|
 
 ## Namespaces and Using
 
