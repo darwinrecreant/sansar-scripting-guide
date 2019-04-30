@@ -9,7 +9,7 @@ The library comes bundled with `LibraryBase.cs` which allows to use the Library'
 To include the `LibraryBase.cs` in your project you will need to make your project uploadable with a sources `json` file. If you are using this repository as your workspace and followed the [IDE setup guidelines](vscode.md), then your sources file would look something like this:
 
 **HelloWorld.json**
-```javascript
+```json
 {
   "source": [
     "HellowWorld.cs",

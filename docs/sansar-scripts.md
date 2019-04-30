@@ -56,7 +56,7 @@ public class HelloWorld2 : SceneObjectScript
 
 You can split your script project into multiple files. This can be uploaded to Sansar as a `json` file that includes the paths of your C# files. Paths can be either relative or absolute. The structure of the json should be something like this:
 
-```javascript
+```json
 {
   "source": [
     "HellowWorld.cs",

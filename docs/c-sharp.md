@@ -245,7 +245,7 @@ class Player
 
 ### Constructors
 
-`Constructor`s are a special kind of method in a class that will be called when the object is created with `new`. They need to be named with the same name of the class. Constructors are normally used to defined the initial values of the object. For example:
+`Constructor`s are a special kind of method in a class that will be called when the object is created with `new`. They need to be named with the same name of the class. Constructors are normally used to define the initial values of the object. For example:
 
 ```csharp
 class Player { 
@@ -320,7 +320,7 @@ Player player1 = new Player(100);
 bool isKill;
 player1.WasHit(40, 20, out isKill); // damage 50, isKill is false
 player1.WasHit(50, 40, out isKill); /// too far away, no damage, isKill is false
-player1.wasHit(70, 4, out isKill); // damage 70, isKill is true
+player1.WasHit(70, 4, out isKill); // damage 70, isKill is true
 
 if (isKill)
 {
@@ -345,11 +345,13 @@ SubscribeToAll(MyEvent, (ScriptEventData data) =>
 
 ## Attributes
 
-Attributes are meta properties that generally do not need to excute during runtime, and is added on top of propeties, methods, and classes. This is mostly needed in Sansar scripts when defining scripts and their parameters, which you can learn about [here](sansar-scripts.md).
+Attributes are meta properties that generally do not need to excute during runtime, and is added on top of properties, methods, and classes. This is mostly needed in Sansar scripts when defining scripts and their parameters, which you can learn about [here](sansar-scripts.md).
 
 An attribute is encapsulated in square brackets and looks something like this:
 
 ```csharp
+using Sansar.Simulation;
+
 [DefaultScript]
 [DisplayName("My Script")]
 public class MyScript : SceneObjectScript {
@@ -364,6 +366,125 @@ public class MyScript : SceneObjectScript {
 
 ## Scope and Inline Functions
 
+Every variable and method has a `scope`, in plain words a scope means where a variable/method can be called, or referenced. The general rule is, anything within the same code block (wrapped in `{` and `}`) will be able to be referenced, including within nested blocks. So that means properties on a class can be used anywhere within its methods, and stuff outside the class cannot.
+
+Functions on a class are methods, and are part of the class "schema", however, functions can also be assigned to variables, and even detached from any class and passed around, for example the following function calls all do the same thing on the last three lines:
+
+```csharp
+public class MyCalss 
+{
+  public void MyMethod() 
+  {
+    Log.Write("function called");
+  }
+}
+
+MyClass myObject = new MyClass();
+Action variableFunction = myObject.MyMethod;
+
+Action inlineFunction = () => 
+{
+  Log.Write("function called");
+}
+
+myObject.MyMethod();
+variableFunction();
+inlineFunction();
+```
+
+Notice the inline function was written like assigning a variable, because functions, just like any value, are objects. To demonstrate scope, see the following:
+
+```csharp
+
+Action inlineFunction = () => 
+{
+  string message1 = "This is within scope";
+  Action inlineFunction3 = () => 
+  {
+    string message2 = "This is not within parent scope";
+    Log.Write(message1);
+  }
+
+  Log.Write(message2); // This is an error and will not compile and cannot be uploaded to Sansar
+}
+```
+
+`message2` is out of scope because it was created in a lower code block and cannot be used outside of it, `message1` however was created in the higher scope and can be used anywhwere inside of it.
+
 ## Logic Gates and Operators
 
+The core of all programs is logic gates and if statements. Logic here means given two true or false values, what should the combination of the the two be, in the form of a 3rd true/false value. The most basic gates that are easy to understand are `NOT`, `AND`, and `OR`, which behave just like in plain Englis. In C# you write NOT as `!`, AND as `&&`, and OR as `||`, and you use them like so:
+
+```csharp
+bool a = true;
+bool b = false;
+
+Log.Write("a AND b = " + (a && b).ToString());
+Log.Write("a OR b =  " + (a || b).ToString());
+Log.Write("NOT a =  " + (!a).ToString());
+```
+
+The above will print `a AND b = False`, `a OR b = True`, and `NOT a = False`. The `ToString()` there is needed because the `boolean` (true/false) type needs to be converted to string before it can be used as part of another string. 
+
+And if statements can be used like so:
+
+```csharp
+bool a = true;
+bool b = false;
+
+if (a && b) 
+{
+  Log.Write("if is true");
+} 
+else 
+{
+  Log.Write("if is false");
+}
+```
+
+Can you guess what the output will be? 😉
+
+Operators allow you to do comparison between two values, although they do not have to be boolean, but result in a boolean value.
+
+Given `int a = 1;` and `int b = 2;`, here are the available operators:
+
+|Operator|Meaning|Example|Result|
+|:------:|-------|-------|------|
+|`==`|equals to|`a == b`|`false`|
+|`!=`|not equals to|`a != b`|`true`|
+|`>`|greater than|`a > b`|`false`|
+|`>=`|greater than or equals to|`a >= b`|`false`|
+|`<`|smaller than|`a < b`|`true`|
+|`<=`|smaller than or eqauls to|`a <= b`|`true`|
+
 ## Namespaces and Using
+
+Every class in C# sharp belongs to a namespace, if a namespace is not defined then the class belongs to the global namesapce. Namespaces are defined like so:
+
+```csharp
+namespace MyNamespace
+{
+  public class MyClass
+  {
+
+  }
+}
+```
+
+The main uses for namespaces are for including references between projects, and avoiding class name collisions (ie other classes with the same name). To use a class from a different namespance then the one you are currently in, use `using`, like so:
+
+```csharp
+using MyNamespace;
+
+namespace MyOtherNamespace
+{
+  public class MyClass
+  {
+    public void MyMethod() {
+      MyNamespace.MyClass someObject = new MyNamespace.MyClass();
+    }
+  }
+}
+```
+
+Notice how I added `MyNamespace.` before the classname when calling it, this is because there is namespace collision and this alleviates ambiguity. If there was no collision then i could use the classname as if it was part of the current namepsace without `MyNamespace.`, because of the `using` statement. You will see the using statement often in C# because most classes are not defined in the global namespace and need to be added with `using` statements.
