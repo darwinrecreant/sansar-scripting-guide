@@ -1,6 +1,6 @@
 # Sansar Scripting Guide
 
-This is a guide for C# scripting in Sansar, and serves as a temporary repository of tips and hints for api until we have an official wiki to use.
+This is a guide for C# scripting in Sansar, and serves as a temporary repository of tips and hints for scripting until we have an official wiki to use.
 
 |#|Section|
 |-:|-|
@@ -29,31 +29,37 @@ Sansar scripts use a custom subset of C# that restict the usage to only whitelis
 ### Environment Limits
 |Limit|Max|
 |-|:-:|
-|Display name length|32|
+|User display name length|32|
+|Free experiences per user|20|
 |Visitors per experience|unlimited|
-|Visitors per instance|35|
 |Instances per experience|unlimited|
+|Visitors per instance|35|
 |Empty experience keep-alive|15mins|
-|Scene dimensions|`-2048` <-> `2048`|
+|Scene dimensions|+/-2048 (xyz)|
 
 ### Scripting Throttles
 
 |Function|Max|Timeframe|
 |-|:-:|:-:|
-|Rezzing|100|1s|
+|Rezzing objects|100|1s|
 |Local teleport|1|Physics frame*|
 |All physics functions|1|Physics frame*|
-|Set media url|7|5s|
+|Set media url|5|10s|
 |Chat messages|64|1s|
+|Http Requests|10|1s|
 
-`* Physics frame is normally 1/90 of a second (~0.011s), though lag may cause calls to skip frames.`
+> * A physics frame is normally 1/90th of a second (~11ms), though lag may cause calls to skip frames. If multiple calls happen in a single frame, then only the last call will apply.
+
 ### Scripting Limits
+
 |Limit|Max|
 |-|:-:|
 |Concurrent coroutines|256|
-|Script memory|32mb|
-|Scene script memory|32mb|
+|Script memory*|32mb|
+|Total scene memory|32mb|
 |Script upload size|1mb|
+
+> * A script with the bare minimum of code is around 4kb of memory.
 
 ## Sansar Controls
 

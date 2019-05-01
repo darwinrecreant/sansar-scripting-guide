@@ -30,13 +30,14 @@ On it's own, this line does not do anything, because it is turning the text to u
 string MyText = "Hello World";
 ```
 
-This code still does not do anything, we have to use it somehow. The fastest way to get an output in a script is using `Log` (note: `Log` is a Sansar specific object and will not be found in other C# environments):
+This code still does not do anything, we have to use it somehow. The fastest way to get an output in a script is using `Log`:
 
 ```csharp
 string MyText = "Hello World";
 
 Log.Write(MyText.ToUpper());
 ```
+> **_NOTE_**: `Log` is a Sansar specific object and will not be found in other C# environments.
 
 So here we can see that we stored our value in a variable, turned it to upper case with it's `ToUpper()` method and used it inside `Log.Write()`. This should print in console: 
 
