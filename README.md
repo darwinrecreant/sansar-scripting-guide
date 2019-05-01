@@ -34,17 +34,19 @@ Sansar scripts use a custom subset of C# that restict the usage to only whitelis
 |Visitors per instance|35|
 |Instances per experience|unlimited|
 |Empty experience keep-alive|15mins|
+|Scene dimensions|-2048 < x/y/z/ < 2048>|
 
 ### Scripting Throttles
 
 |Function|Max|Timeframe|
 |-|:-:|:-:|
 |Rezzing|100|1s|
-|Local teleport|90|1s|
-|All physics functions|90|1s|
+|Local teleport|1|Physics frame*|
+|All physics functions|1|Physics frame*|
 |Set media url|7|5s|
 |Chat messages|64|1s|
 
+`* Physics frame is normally 1/90 of a second (~0.011s), though lag may cause calls to skip frames.`
 ### Scripting Limits
 |Limit|Max|
 |-|:-:|
