@@ -34,7 +34,7 @@ Sansar scripts use a custom subset of C# that restict the usage to only whitelis
 |Visitors per instance|35|
 |Instances per experience|unlimited|
 |Empty experience keep-alive|15mins|
-|Scene dimensions|-2048 < x/y/z/ < 2048>|
+|Scene dimensions|`-2048` - `2048`>|
 
 ### Scripting Throttles
 
