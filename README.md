@@ -63,6 +63,26 @@ Sansar scripts use a custom subset of C# that restict the usage to only whitelis
 
 > \* A script with the bare minimum of code is around 4kb of memory.
 
+
+### User body & movement
+
+|Property|Value|
+|-|:-:|
+|Walking speed|1.7m/s|
+|Running speed|4.8m/s|
+|Min jump height*|0.9m|
+|Max jump height*|1.7m|
+|Edge climb max height|0.45m|
+|Edge climb min depth|0.29m|
+|Slope climb max angle|59 degrees|
+|Standing height**|1.65m|
+|Crouch height**|1.1m|
+|Collision width|1m|
+
+> \* Assuming 1g gravity.
+
+> \*\* Assuming 1.0 avatar scale.
+
 ## Sansar Controls
 
 User controls can be subscribed to using `User.Client.Subscribe()`. Currently there is no way to block Sansar native controls when listening to them.
