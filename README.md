@@ -46,9 +46,11 @@ Sansar scripts use a custom subset of C# that restict the usage to only whitelis
 |All physics functions|1|Physics frame*|
 |Set media url|5|10s|
 |Chat messages|64|1s|
-|Http Requests|10|1s|
+|Http Requests**|10|1s|
 
-> * A physics frame is normally 1/90th of a second (~11ms), though lag may cause calls to skip frames. If multiple calls happen in a single frame, then only the last call will apply.
+> \* A physics frame is normally 1/90th of a second (~11ms), though lag may cause calls to skip frames. If multiple calls happen in a single frame, then only the last call will apply.
+
+> \*\* Urls are limited to 2048 characters.
 
 ### Scripting Limits
 
@@ -59,7 +61,7 @@ Sansar scripts use a custom subset of C# that restict the usage to only whitelis
 |Total scene memory|32mb|
 |Script upload size|1mb|
 
-> * A script with the bare minimum of code is around 4kb of memory.
+> \* A script with the bare minimum of code is around 4kb of memory.
 
 ## Sansar Controls
 
