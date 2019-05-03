@@ -9,7 +9,6 @@ This is a guide for C# scripting in Sansar, and serves as a temporary repository
 |3|[Limits](#limits)|
 |4|[Sansar Controls](#sansar-controls)|
 
-
 ## Intro to C#
 
 C# (C Sharp) is an object-oriented programming (OOP) language developed by Microsoft that is primarily used for creating games. Many popular gaming frameworks, such as Unity, use C#, and this is also the language used for Sansar scripts.
@@ -34,7 +33,7 @@ Sansar scripts use a custom subset of C# that restict the usage to only whitelis
 |Visitors per experience|unlimited|
 |Instances per experience|unlimited|
 |Visitors per instance|35|
-|Empty experience keep-alive|15mins|
+|Empty experience keep-alive|10mins|
 |Scene dimensions|+/-2048 (xyz)|
 
 ### Scripting Throttles
@@ -48,7 +47,7 @@ Sansar scripts use a custom subset of C# that restict the usage to only whitelis
 |Chat messages|64|1s|
 |Http Requests**|10|1s|
 
-> \* A physics frame is normally 1/90th of a second (~11ms), though lag may cause calls to skip frames. If multiple calls happen in a single frame, then only the last call will apply.
+> \* A physics frame is normally 1/90th of a second (~11ms), though lag may cause calls to skip frames. If multiple calls of the same function happen in a single frame, then only the last call will apply.
 
 > \*\* Urls are limited to 2048 characters.
 
@@ -69,7 +68,13 @@ Sansar scripts use a custom subset of C# that restict the usage to only whitelis
 |Property|Value|
 |-|:-:|
 |Walking speed|1.7m/s|
+|Walking backwards speed|1.4m/s|
 |Running speed|4.8m/s|
+|Running backwards speed|3.1m/s|
+|Strafe running speed|4.0m/s|
+|Strafe walking speed|1.4m/s|
+|Crouching speed|1.0m/s|
+|Crouching backwards speed|0.9m/s|
 |Min jump height*|0.9m|
 |Max jump height*|1.7m|
 |Edge climb max height|0.45m|
