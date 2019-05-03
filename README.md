@@ -59,9 +59,11 @@ Sansar scripts use a custom subset of C# that restict the usage to only whitelis
 |Script memory*|32mb|
 |Total scene memory|32mb|
 |Script upload size|1mb|
+|Ticks per second**|10,000,000|
 
 > \* A script with the bare minimum of code is around 4kb of memory.
 
+> \*\* A single boolean logic operation can happen in a single tick. In reality, while code runs at 10 million ticks per second, only 6 million are executed because only part of a server frame is dedicated to scripts. Total ticks are shared with other running scripts, and therefore your script speed is dependent on how many scripts are currently executing code. Sansar API's are guaranteed to be no more than 3000 ticks (~0.3ms) each.
 
 ### User body & movement
 
