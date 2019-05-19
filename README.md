@@ -92,7 +92,7 @@ Sansar scripts use a custom subset of C# that restict the usage to only whitelis
 
 ## Sansar Controls
 
-User controls can be subscribed to using `User.Client.Subscribe()`. Currently there is no way to block Sansar native controls when listening to them.
+User controls can be subscribed to using `AgentPrivate.Client.Subscribe()`. Currently there is no way to block Sansar native controls when listening to them.
 
 | Keyword | Desktop | Vive | Rift | Notes |
 |---------|:-------:|:----:|:----:|-------|
