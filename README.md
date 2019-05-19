@@ -44,12 +44,14 @@ Sansar scripts use a custom subset of C# that restict the usage to only whitelis
 |Local teleport|1|Physics frame*|
 |All physics functions|1|Physics frame*|
 |Set media url|5|10s|
-|Chat messages|64|1s|
-|Http Requests**|10|1s|
+|Chat messages**|64|1s|
+|Http Requests***|10|1s|
 
 > \* A physics frame is normally 1/90th of a second (~11ms), though lag may cause calls to skip frames. If multiple calls of the same function happen in a single frame, then only the last call will apply.
 
-> \*\* Urls are limited to 2048 characters.
+> \*\* Chat messages are limited to 2048 characters.
+
+> \*\*\* Urls are limited to 2048 characters. Payloads are limited to 16kb.
 
 ### Scripting Limits
 
@@ -88,7 +90,7 @@ Sansar scripts use a custom subset of C# that restict the usage to only whitelis
 
 > \* Assuming 1g gravity.
 
-> \*\* Assuming 1.0 avatar scale.
+> \*\* Unaffected by avatar scale.
 
 ## Sansar Controls
 
