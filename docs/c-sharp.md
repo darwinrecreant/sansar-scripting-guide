@@ -307,6 +307,10 @@ class Player
     {
       isDead = true;
     }
+    else
+    {
+      isDead = false;
+    }
     return true;
   }
 

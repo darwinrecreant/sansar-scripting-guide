@@ -80,6 +80,7 @@ using Sansar.Script;
 public class HelloWorld : SceneObjectScript 
 {
 
+  [Tooltip("This is a help text message")]
   [DisplayName("My Message")]
   [DefaultValue("Hello World")]
   public string Message;
