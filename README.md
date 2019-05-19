@@ -11,7 +11,7 @@ This is a guide for C# scripting in Sansar, and serves as a temporary repository
 
 ## Intro to C#
 
-C# (C Sharp) is an object-oriented programming (OOP) language developed by Microsoft that is primarily used for creating games. Many popular gaming frameworks, such as Unity, use C#, and this is also the language used for Sansar scripts.
+C# (C Sharp) is an object-oriented programming (OOP) language developed by Microsoft that is commonly used for creating games. Many popular gaming frameworks, such as Unity, use C#, and this is also the language used for Sansar scripts.
 
 - [Setting up Visual Studio Code](/docs/vscode.md)
 - [C# Basics](/docs/c-sharp.md)
