@@ -101,6 +101,7 @@ If StartEnabled is false then the script will not respond to interactions until 
 
     void Subscribe(ScriptEventData sed) 
     {
+      if (subscription != null) return;
       // if (!string.IsNullOrWhiteSpace(MyCustomEvent)) 
       // {
       //   subscription += SubscribeToAll(MyCustomEvent, (ScriptEventData data) => 
