@@ -12,7 +12,8 @@ C# is very complex language and there are a lot of concepts to learn. This guide
 |6|[Attributes](#Attributes)|
 |7|[Scope and Inline Functions](#Scope-and-Inline-Functions)|
 |8|[Logic Gates and Operators](#Logic-Gates-and-Operators)|
-|9|[Namespaces and Using](#Namespaces-and-Using)|
+|9|[Exceptions](#Exceptions)|
+|10|[Namespaces and Using](#Namespaces-and-Using)|
 
 ## Objects
 
@@ -461,6 +462,32 @@ Given `int a = 1;` and `int b = 2;`, here are the available operators:
 |`>=`|greater than or equals to|`a >= b`|`false`|
 |`<`|smaller than|`a < b`|`true`|
 |`<=`|smaller than or equals to|`a <= b`|`true`|
+
+## Exceptions
+
+When an error happens during runtime (when the code is running) it is called an `Exception`. Exceptions occur when the code reaches a situation it did not expect to happen, such as when calling a function on a user when they are no longer in the scene. It is called exception because it reaches a situtation outside the bounds of the function's rules.
+
+Exceptions usually kills the script entirely when they occur and are unrecoverable, so it is best to avoid them at all costs. You can see the details of exceptions when they occur in the debug console (<kbd>ctrl</kbd> + <kbd>D</kbd>).
+
+Exceptions are very common while coding, and an indicator of a good coder is when their code always checks for validity of objects before using them, such as checking the user is still in the scene as in the example above. However, many times you may want to save the effort of checking every bit of code by simply try/catching exceptions, which allows your code to exit the current code block during an error and continue on from a different point. To do that you wrap your code in a `try` block, which is followed by a `catch` block. When an exception is `thrown` in the try block, the script will continue to run from the catch block. See for example:
+
+```csharp
+string myMessage = null;
+
+try 
+{
+  myMessage.ToUpper();
+  Log.Write("No error");
+} 
+catch (Exception e) 
+{
+  Log.Write("There was an error with myMessage");
+}
+```
+
+In the example above, we tried calling `ToUpper()` on `myMessage`, but because it was set to `null` previously, and really has no text to turn to upper case, it throws an exception. When reaching that line it will exit the try block and go the catch block, which also provides the the exception object as a parameter. Therefore, what will appear in debug console is only `There was an error with myMessage`.
+
+The most common exceptions you will run into are null pointers, as in the example above, many times you cannot set a value to variable immediately, and its very easy to be negligent in keeping track of when you do. In the context of Sansar, you can have objects/users that become invalid because they are no longer in the scene, and calling any functions on them will throw an an exception.
 
 ## Namespaces and Using
 
