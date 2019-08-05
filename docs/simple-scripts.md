@@ -32,12 +32,12 @@ workspace/
 
 ## Script Contents
 
-To make the script compatible with the Script Library, simply extend `SceneObjectBase` instead of `SceneObjectScript` and use `SimpleInit()` instead of `Init()` as your script bootstrap method. The bare mininum to create the script is as follows:
+To make the script compatible with the Script Library, simply extend `LibraryBase` instead of `SceneObjectScript` and use `SimpleInit()` instead of `Init()` as your script bootstrap method. The bare mininum to create the script is as follows:
 
 ```csharp
 using ScriptLibrary;
 
-public class HelloWorld : SceneObjectBase 
+public class HelloWorld : LibraryBase 
 {
 
   protected override void SimpleInit() 
@@ -70,7 +70,7 @@ using ScriptLibrary;
 namespace Templates 
 {
 
-  public class ScriptLibraryTemplate : SceneObjectBase 
+  public class ScriptLibraryTemplate : LibraryBase 
   {
 
     [Tooltip("Enable responding to events for this script")]
