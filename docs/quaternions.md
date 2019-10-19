@@ -28,7 +28,7 @@ There is a constant for each Vector global direction that can be used:
 
 ### From euler angles
 
-Euler angles are radian (as opposed to 360 degrees) based angles. There are 2 * PI radians in 360 degrees. A rotation can be represented by 3 radian values, or a `Vector` of `X`, `Y`, and `Z`, where each value is a rotation around thei respective axis. Not all euler vectors are valid, because of [gimble-locking](https://www.youtube.com/watch?v=zc8b2Jo7mno). All rotation parameters in the Sansar UI are in Euler degree vectors, which are considered to be more human-friendly representation of rotations. Converting a Euler degree vector to a radian vector can be done like so:
+Euler angles are radian (as opposed to 360 degrees) based angles. There are 2 * PI radians in 360 degrees. A rotation can be represented by 3 radian values, or a `Vector` of `X`, `Y`, and `Z`, where each value is a rotation around the respective axis. Not all Euler vectors are valid, because of [gimble-locking](https://www.youtube.com/watch?v=zc8b2Jo7mno). All rotation parameters in the Sansar UI are in Euler degree vectors, which are considered to be more human-friendly representation of rotations. Converting a Euler degree vector to a radian vector can be done like so:
 
 ```csharp
 Vector ConvertToRadian(Vector degreeBased) {
@@ -36,7 +36,7 @@ Vector ConvertToRadian(Vector degreeBased) {
 }
 ```
 
-Creating a quaternion from a radian euler vector can be done like so:
+Creating a quaternion from a radian Euler vector can be done like so:
 
 ```csharp
 Quaternion ConvertoToQuaternion(Vector radianBasedAngles) {
@@ -100,7 +100,7 @@ Quaternion RotationAtGround(RayCastHit ground, Vector forward) {
 
 Applying one rotation to another is done through the muliply (`*`) operator. Rotating a rotation can be somewhat confusing and unintuitive, especially because the order if opertation matters here unlike regular math multiplication. At every step you have to think, what is the starting rotation, and how do I want to transform it. 
 
-Another way to explain rotation multiplication is global vs local. Suppose you have a 90 degree rotation quaternion on the z axis (Rz), and you have an object's rotation (Ro). Ro * Rz would result in the object rotating local to the object's rotation wherever it is facing, like someone holding a fidget spinner. While Rz * Ro would make the object rotated on the global Z axis, as if it was standing on a rotating platform.
+Another way to explain rotation multiplication is global vs local. Suppose you have a 90 degree rotation quaternion on the z axis (Rz), and you have an object's rotation (Ro). Ro * Rz would result in the object rotating local to the object's rotation wherever it is facing, like someone holding a fidget spinner. While Rz * Ro would make the object rotate on the global Z axis, as if it was standing on a rotating platform.
 
 Also whenever multiplying rotations, it is advised to `Normalize` often, which turns the quaternion to unit values, to avoid floating point errors.
 
@@ -137,7 +137,7 @@ Which then can be used on a moving npc like so:
 
 ```csharp
 Vector StepFacingForward(float stepSize, ObjectPrivate npc, Quaternion correction) {
-  return npc.Position + GetMyObjectForward(obj, correction) * stepSize;
+  return npc.Position + GetMyObjectForward(npc, correction) * stepSize;
 }
 ```
 
@@ -145,7 +145,7 @@ Vector StepFacingForward(float stepSize, ObjectPrivate npc, Quaternion correctio
 
 Sometimes you want to find a fraction of a rotation between two rotations, such as when trying to animate a rotation. This can be done by interpolating the rotation with the `Slerp` operation on the quaternion. Unforturnately this function is not available to us through the Script API. I have included an implementation of Slerp at the bottom of this document, which will add an extension to `Quaternion`.
 
-Once you encluded the extension method, it is then possible to find a fraction rotation between two rotations, which would be used like so:
+Once you included the extension method, it is then possible to find the fraction of rotation between two rotations, which would be used like so:
 
 ```csharp
 Quaternion RotationStep(Quaternion from, Quaternion to, float stepFraction) {
@@ -154,6 +154,7 @@ Quaternion RotationStep(Quaternion from, Quaternion to, float stepFraction) {
 ```
 
 **Slerp.cs**
+
 ```csharp
   public static class QuaternionExt {
     /// <summary>
