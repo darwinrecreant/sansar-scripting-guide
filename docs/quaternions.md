@@ -82,7 +82,7 @@ Quaternion RotationFacingAgent(ObjecPrivate obj, ObjectPrivate agent, bool keepH
   if (keepHorizontal) {
     offset.Z = 0;
   }
-  return Quternion.FromLook(offset, Vector.Up);
+  return Quternion.FromLook(offset, Vector.ObjectUp);
 }
 ```
 
