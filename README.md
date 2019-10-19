@@ -8,6 +8,7 @@ This is a guide for C# scripting in Sansar, and serves as a temporary repository
 |2|[Intro to Sansar Scripts](#intro-to-sansar-scripts)|
 |3|[Limits](#limits)|
 |4|[Sansar Controls](#sansar-controls)|
+|5|[Quaternion Math](/docs/quaternions.md)
 
 ## Intro to C#
 
