@@ -24,7 +24,7 @@ There is a constant for each Vector global direction that can be used:
 - `Vector.ObjectUp` - <0,0,1>
 - `Vector.ObjectDown` - <0,0,-1>
 
-## Creating quaternions from angles
+## Creating quaternions
 
 ### From euler angles
 
