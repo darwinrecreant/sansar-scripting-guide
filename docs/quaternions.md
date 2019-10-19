@@ -165,7 +165,7 @@ Quaternion RotationStep(Quaternion from, Quaternion to, float stepFraction) {
     /// <param name="to">Second quaternion for interpolation.</param>
     /// <param name="t">Interpolation coefficient.</param>
     /// <returns>SLERP-interpolated quaternion between the two given quaternions.</returns>
-    public static Quaternion Slerp(this Quaternion from, Quaternion to, double t)
+    public static Quaternion Slerp(this Quaternion from, Quaternion to, float t)
     {
       return from.Slerp(to, t, true);
     }
